@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     Rigidbody rb;
-
+    [SerializeField] AudioClip stepSound;
+    //private AudioSource audioSource;
     [SerializeField] float moveSpeed;
 
     [SerializeField] float turnSpeed;
@@ -34,7 +35,15 @@ public class Movement : MonoBehaviour
     public void OnMove(InputValue input)
     {
         Vector2 xyInput = input.Get<Vector2>();
+        AudioSource.PlayClipAtPoint(stepSound, transform.position, 1f);
 
         movementVec = new Vector3(xyInput.x, 0, xyInput.y);
+    }
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "FOV")
+        {
+            //Debug.Log("OwO");
+        }
     }
 }
