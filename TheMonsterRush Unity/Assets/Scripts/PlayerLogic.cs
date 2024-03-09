@@ -71,8 +71,7 @@ public class PlayerLogic : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        if(input.isPressed && isSitting)
+        else if(input.isPressed && isSitting && !hasDrink)
         {
             isSitting = false;
             //TODO: stand up animation

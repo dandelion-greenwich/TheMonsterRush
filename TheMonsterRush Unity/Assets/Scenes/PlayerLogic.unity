@@ -444,7 +444,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.1
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: a63055e8873d155429a39ac6f20f42c6, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!1001 &588326420
 PrefabInstance:
@@ -816,6 +816,18 @@ PrefabInstance:
     - target: {fileID: 7737143989363376221, guid: 6ab98734f24030f419945d6e2ee9ff9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345892955004683201, guid: 6ab98734f24030f419945d6e2ee9ff9c, type: 3}
+      propertyPath: maxEnergy
+      value: 1111
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345892955004683201, guid: 6ab98734f24030f419945d6e2ee9ff9c, type: 3}
+      propertyPath: minEnergy
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822440253153168223, guid: 6ab98734f24030f419945d6e2ee9ff9c, type: 3}
+      propertyPath: player
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
