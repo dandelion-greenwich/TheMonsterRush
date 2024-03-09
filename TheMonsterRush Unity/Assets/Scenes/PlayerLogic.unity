@@ -752,9 +752,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc70b7600f61ba34b9d5550c334db0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stepSound: {fileID: 0}
   moveSpeed: 20
   turnSpeed: 10
   movementVec: {x: 0, y: 0, z: 0}
+  player: {fileID: 1139394702}
 --- !u!114 &1139394699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +847,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5467b711eba59e4e8f26ed8dfb08caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minEnergy: 0
+  maxEnergy: 0
+  currentEnergy: 0
+  cooldown: 0
+  divideFactor: 0
+  holdMonsterValue: 0
+  monsterScore: 0
+  hasDrink: 0
+  isDrinking: 0
+  gotCaught: 0
+  isSitting: 0
+  closeToChair: 0
+  closeToDispenser: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
