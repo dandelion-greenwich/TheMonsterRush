@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Desk : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int canAmount, maxCanAmount;
 
-    // Update is called once per frame
-    void Update()
+    public bool CheckSpace()
     {
-        
+        if (canAmount < maxCanAmount)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

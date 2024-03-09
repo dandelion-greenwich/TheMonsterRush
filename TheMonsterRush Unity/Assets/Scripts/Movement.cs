@@ -25,20 +25,21 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!player.isSitting)
-        {
-            rb.AddForce(transform.forward * movementVec.z * moveSpeed);
-            rb.AddTorque(transform.up * movementVec.x * turnSpeed);
-        }
+        rb.AddForce(transform.forward * movementVec.z * moveSpeed);
+        rb.AddTorque(transform.up * movementVec.x * turnSpeed);        
     }
 
 
     public void OnMove(InputValue input)
     {
-        Vector2 xyInput = input.Get<Vector2>();
-        AudioSource.PlayClipAtPoint(stepSound, transform.position, 1f);
+        if (!player.isSitting)
+        {
+            Vector2 xyInput = input.Get<Vector2>();
+            AudioSource.PlayClipAtPoint(stepSound, transform.position, 1f);
 
-        movementVec = new Vector3(xyInput.x, 0, xyInput.y);
+            movementVec = new Vector3(xyInput.x, 0, xyInput.y);
+        }
+        
     }
     public void OnTriggerStay(Collider other)
     {

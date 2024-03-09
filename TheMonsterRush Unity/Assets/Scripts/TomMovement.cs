@@ -36,9 +36,7 @@ public class TomMovement : MonoBehaviour
             Vector3 calculatedDirection = lookAt.transform.position - transform.position;   
             Vector3 appliedDirection = Vector3.RotateTowards(transform.forward, calculatedDirection, speed, 0f);   
 
-            transform.rotation = Quaternion.LookRotation(appliedDirection);   
-
-            Debug.Log(transform.rotation.y);
+            transform.rotation = Quaternion.LookRotation(appliedDirection);
 
             if (timer >= stayingTimer)
             {

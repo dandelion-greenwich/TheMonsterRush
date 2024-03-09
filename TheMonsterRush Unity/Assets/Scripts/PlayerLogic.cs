@@ -10,6 +10,7 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] float cooldown , divideFactor, holdMonsterValue;
     [SerializeField] int monsterScore;
     public bool hasDrink, isDrinking, gotCaught, isSitting, closeToChair, closeToDispenser;
+    Desk currentDesk;
 
 
     // Start is called before the first frame update
@@ -58,7 +59,7 @@ public class PlayerLogic : MonoBehaviour
 
     public void OnFire(InputValue input)
     {
-        if (input.isPressed && hasDrink && isSitting)
+        if (input.isPressed && hasDrink && isSitting && currentDesk.CheckSpace())
         {
             monsterScore += 100;
             hasDrink = false;
@@ -71,15 +72,14 @@ public class PlayerLogic : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else if(input.isPressed && isSitting && !hasDrink)
+        else if(input.isPressed && isSitting && !hasDrink || !currentDesk.CheckSpace())
         {
             isSitting = false;
             //TODO: stand up animation
         }
 
-        if(input.isPressed && !isSitting && closeToChair)
-        {
-            //TODO: if(Desk.canAmount < Desk.maxCanAmount){} <--- this might can go on the previous check, maybe a method that returns a boolean for availability of the desk
+        if(input.isPressed && !isSitting && closeToChair && currentDesk.CheckSpace())
+        {            
             isSitting = true;
             //TODO: sit down animation
         }
@@ -95,6 +95,7 @@ public class PlayerLogic : MonoBehaviour
         if(collision.gameObject.tag == "Chair") 
         {
             closeToChair = true;
+            //TODO: currentDesk = collision.gameobject.GetComponent<Desk>();
         }
         else
         {
