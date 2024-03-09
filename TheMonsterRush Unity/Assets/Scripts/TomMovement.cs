@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,6 +10,7 @@ public class TomMovement : MonoBehaviour
     public List<Transform> targets;
     public int targetIndex;
     public float timer, stayingTimer, patrolingSpeed;
+    [SerializeField] GameObject lookAt;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -29,8 +31,11 @@ public class TomMovement : MonoBehaviour
         {
             agent.speed = 0;
             timer += Time.deltaTime;
-            //Quaternion rotation = Quaternion.Euler(0f, transform.rotation.y + 45f, 0f);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0f, transform.rotation.y + 45f, 0f), 0.01f);
+            //Quaternion targerRotation = Quaternion.Euler(0f, 45f, 0f);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, targerRotation, timeCount * 0.05f);
+            transform.rotation = Quaternion.FromToRotation(transform.position, new Vector3(0f, 0f, 0));
+            Debug.Log(transform.rotation.y);
+
             if (timer >= stayingTimer)
             {
                 timer = 0;
