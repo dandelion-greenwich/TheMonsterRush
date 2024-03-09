@@ -31,9 +31,13 @@ public class TomMovement : MonoBehaviour
         {
             agent.speed = 0;
             timer += Time.deltaTime;
-            //Quaternion targerRotation = Quaternion.Euler(0f, 45f, 0f);
-            //transform.rotation = Quaternion.Lerp(transform.rotation, targerRotation, timeCount * 0.05f);
-            transform.rotation = Quaternion.FromToRotation(transform.position, new Vector3(0f, 0f, 0));
+
+            float speed = 2 * Time.deltaTime;
+            Vector3 calculatedDirection = lookAt.transform.position - transform.position;   
+            Vector3 appliedDirection = Vector3.RotateTowards(transform.forward, calculatedDirection, speed, 0f);   
+
+            transform.rotation = Quaternion.LookRotation(appliedDirection);   
+
             Debug.Log(transform.rotation.y);
 
             if (timer >= stayingTimer)

@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        player = GetComponent<PlayerLogic>();
     }
 
     private void FixedUpdate()

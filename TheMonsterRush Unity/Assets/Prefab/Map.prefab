@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6468487915339678033}
   - component: {fileID: 3096586571949230956}
   - component: {fileID: 5058236905023627299}
+  - component: {fileID: 7747451629464233254}
   m_Layer: 8
   m_Name: Desk (5)
   m_TagString: Desk
@@ -133,6 +134,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7747451629464233254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364960759715707525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &801473746096648404
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +159,7 @@ GameObject:
   - component: {fileID: 4634757273091960641}
   - component: {fileID: 4703645582263648251}
   - component: {fileID: 7487738159189859209}
+  - component: {fileID: 1552861421944757566}
   m_Layer: 8
   m_Name: Desk (7)
   m_TagString: Desk
@@ -266,6 +280,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1552861421944757566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801473746096648404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &804276713861113115
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +438,7 @@ GameObject:
   - component: {fileID: 4567868319332392062}
   - component: {fileID: 3342046362584644084}
   - component: {fileID: 626513520122854006}
+  - component: {fileID: 5377621749647181626}
   m_Layer: 8
   m_Name: Desk (9)
   m_TagString: Desk
@@ -532,6 +559,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5377621749647181626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822391539488130439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1112070059221189082
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +584,7 @@ GameObject:
   - component: {fileID: 8982567681678398133}
   - component: {fileID: 5408862802799030118}
   - component: {fileID: 1566650710826667721}
+  - component: {fileID: 8935063222248837602}
   m_Layer: 8
   m_Name: Desk (3)
   m_TagString: Desk
@@ -665,6 +705,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8935063222248837602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112070059221189082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2372405297859103197
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +730,7 @@ GameObject:
   - component: {fileID: 5738931233051136975}
   - component: {fileID: 8463246093715500587}
   - component: {fileID: 1539488475554859883}
+  - component: {fileID: 193732170179831026}
   m_Layer: 8
   m_Name: Desk (2)
   m_TagString: Desk
@@ -798,6 +851,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &193732170179831026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372405297859103197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2412099819467914633
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +1009,7 @@ GameObject:
   - component: {fileID: 7488264806551674441}
   - component: {fileID: 4442380210798808300}
   - component: {fileID: 4717124679822809998}
+  - component: {fileID: 8456229609940535516}
   m_Layer: 8
   m_Name: Desk (10)
   m_TagString: Desk
@@ -1064,6 +1130,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8456229609940535516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731361702623143057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3734413154928675866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,6 +1421,7 @@ GameObject:
   - component: {fileID: 823890150836510088}
   - component: {fileID: 4538665475418640075}
   - component: {fileID: 620825155842657299}
+  - component: {fileID: 7996958518884657994}
   m_Layer: 8
   m_Name: Desk (8)
   m_TagString: Desk
@@ -1463,6 +1542,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7996958518884657994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4544015882778956057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4544236628969570681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,6 +1567,7 @@ GameObject:
   - component: {fileID: 7809396998315609841}
   - component: {fileID: 8423766765788154263}
   - component: {fileID: 2818297658182991337}
+  - component: {fileID: 6330776127303181206}
   m_Layer: 8
   m_Name: Desk
   m_TagString: Desk
@@ -1596,6 +1688,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6330776127303181206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4544236628969570681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5262988643452877775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1713,7 @@ GameObject:
   - component: {fileID: 7324876860222777853}
   - component: {fileID: 1096138758458976451}
   - component: {fileID: 515709180398247108}
+  - component: {fileID: 5605916487550395797}
   m_Layer: 8
   m_Name: Desk (12)
   m_TagString: Desk
@@ -1729,6 +1834,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5605916487550395797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262988643452877775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5837983394178997647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1859,7 @@ GameObject:
   - component: {fileID: 2865634081120867666}
   - component: {fileID: 7537577169831217824}
   - component: {fileID: 717087903799534836}
+  - component: {fileID: 8462121840768271225}
   m_Layer: 8
   m_Name: Desk (6)
   m_TagString: Desk
@@ -1862,6 +1980,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8462121840768271225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5837983394178997647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6143938775127073668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,6 +2227,7 @@ GameObject:
   - component: {fileID: 7931372916551356264}
   - component: {fileID: 6443454652772257851}
   - component: {fileID: 6967967976583877342}
+  - component: {fileID: 3779657652069945464}
   m_Layer: 8
   m_Name: Desk (11)
   m_TagString: Desk
@@ -2217,6 +2348,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3779657652069945464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8033029219846678067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8093671016571619245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,6 +2373,7 @@ GameObject:
   - component: {fileID: 8613458844929766969}
   - component: {fileID: 2363150569857513978}
   - component: {fileID: 2209516806573448569}
+  - component: {fileID: 2292155414130245067}
   m_Layer: 8
   m_Name: Desk (4)
   m_TagString: Desk
@@ -2350,6 +2494,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2292155414130245067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093671016571619245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8539598529020801522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,6 +2519,7 @@ GameObject:
   - component: {fileID: 7327091656724771190}
   - component: {fileID: 8020558943928961468}
   - component: {fileID: 1174943074319376117}
+  - component: {fileID: 344127083374752178}
   m_Layer: 8
   m_Name: Desk (13)
   m_TagString: Desk
@@ -2483,6 +2640,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &344127083374752178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539598529020801522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8784912715655783256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,6 +2665,7 @@ GameObject:
   - component: {fileID: 8715045246826515648}
   - component: {fileID: 4271477783912068520}
   - component: {fileID: 2293566430770384477}
+  - component: {fileID: 6374924405413075269}
   m_Layer: 8
   m_Name: Desk (1)
   m_TagString: Desk
@@ -2616,6 +2786,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6374924405413075269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784912715655783256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9024454953745532519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2811,7 @@ GameObject:
   - component: {fileID: 2257775079746315111}
   - component: {fileID: 2726779143378775014}
   - component: {fileID: 478756193565451156}
+  - component: {fileID: 9150815648897775326}
   m_Layer: 8
   m_Name: Desk (14)
   m_TagString: Desk
@@ -2749,3 +2932,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9150815648897775326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024454953745532519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
