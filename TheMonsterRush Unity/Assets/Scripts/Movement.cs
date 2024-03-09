@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] Vector3 movementVec;
 
+    [SerializeField] PlayerLogic player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,11 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(transform.forward * movementVec.z * moveSpeed);
-        rb.AddTorque(transform.up * movementVec.x * turnSpeed);
+        if (!player.isSitting)
+        {
+            rb.AddForce(transform.forward * movementVec.z * moveSpeed);
+            rb.AddTorque(transform.up * movementVec.x * turnSpeed);
+        }
     }
 
 
