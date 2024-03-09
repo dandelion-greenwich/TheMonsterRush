@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
 
     public void OnMove(InputValue input)
     {
+        Debug.Log("OwO");
         Vector2 xyInput = input.Get<Vector2>();
 
         movementVec = new Vector3(xyInput.x, 0, xyInput.y);
