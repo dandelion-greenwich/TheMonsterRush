@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class VendingMachine : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] GameObject monsterCan, frontSide, player;
+    [SerializeField] bool timerBool = false;
+    [SerializeField] float timer, setTimer;
     void Update()
     {
-        
+        Dispense();
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            timerBool = true;
+        }   
+    }
+    public void Dispense()
+    {
+        if (timerBool == true)
+        {
+            timer += Time.deltaTime;
+            if (timer >= setTimer)
+            {
+                Instantiate(monsterCan, frontSide.transform.position, Quaternion.identity);
+                timer = 0;
+                timerBool = false;
+            }
+        }
     }
 }
