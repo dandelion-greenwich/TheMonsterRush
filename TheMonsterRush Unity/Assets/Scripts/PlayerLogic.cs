@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerLogic : MonoBehaviour
 {
-    [SerializeField] float minEnergy, maxEnergy, currentEnergy;
+    [SerializeField] float minEnergy, maxEnergy;
+    public float currentEnergy;
     [SerializeField] float cooldown , divideFactor, holdMonsterValue;
     [SerializeField] int monsterScore;
     public bool hasDrink, isDrinking, gotCaught, isSitting, closeToChair, closeToDispenser;
@@ -20,7 +21,11 @@ public class PlayerLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentEnergy -= Time.deltaTime * divideFactor;
+        if (!isSitting)
+        {
+            currentEnergy -= Time.deltaTime * divideFactor;
+        }
+        
         CheckEnergy();
     }
 
