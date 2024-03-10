@@ -478,8 +478,8 @@ RectTransform:
   m_Children:
   - {fileID: 929118601}
   - {fileID: 674798880}
-  - {fileID: 1245501210}
   - {fileID: 1671018024}
+  - {fileID: 1245501210}
   m_Father: {fileID: 9040188261735206853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -827,7 +827,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 674798882}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 752358308724229569}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OnStartGamePress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &674798882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,7 +1339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I said no monster
+  m_text: I said no monster!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1497,7 +1509,7 @@ GameObject:
   - component: {fileID: 1245501212}
   - component: {fileID: 1245501211}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1566,7 +1578,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1245501212}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 752358308724229569}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OnPauseMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1245501212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,7 +1641,7 @@ GameObject:
   - component: {fileID: 1362747386}
   - component: {fileID: 1362747385}
   m_Layer: 5
-  m_Name: ReplayText
+  m_Name: MainMenuText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1662,9 +1686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quit
-
-'
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1833,7 +1855,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1671018026}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 752358308724229569}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OnSettingsPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1671018026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2788,6 +2822,7 @@ MonoBehaviour:
   AudioSettingsPanel: {fileID: 1456860576426915859}
   VideoSettingsPanel: {fileID: 7613367058647132021}
   KeybindingsPanel: {fileID: 7259990586801803442}
+  GameOverPanel: {fileID: 0}
 --- !u!222 &761810490388678878
 CanvasRenderer:
   m_ObjectHideFlags: 0
