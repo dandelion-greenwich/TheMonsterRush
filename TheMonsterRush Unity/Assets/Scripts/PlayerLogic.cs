@@ -9,14 +9,17 @@ public class PlayerLogic : MonoBehaviour
     public float currentEnergy;
     [SerializeField] float cooldown , divideFactor, holdMonsterValue;
     [SerializeField] int monsterScore;
-    public bool hasDrink, isDrinking, gotCaught, isSitting, closeToChair, closeToDispenser;
-    Desk currentDesk;
+    public bool hasDrink, isDrinking, gotCaught, isSitting, closeToChair, closeToDispenser, isPressed;
+    [SerializeField]Desk currentDesk, inputDesk;
+    [SerializeField]VendingMachine vendingMachine;
+    Vector3 spawnPosition;
 
 
     // Start is called before the first frame update
     void Start()
     {
         divideFactor = 1.0f / 4f;
+        spawnPosition = GameObject.FindGameObjectWithTag("SpawnPoint").gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -59,34 +62,58 @@ public class PlayerLogic : MonoBehaviour
 
     public void OnFire(InputValue input)
     {
-        if (input.isPressed && hasDrink && isSitting && currentDesk.CheckSpace())
+        if (!gotCaught)
         {
-            monsterScore += 100;
-            hasDrink = false;
-            if(currentEnergy < maxEnergy)
+            if (currentDesk != null)
             {
-                currentEnergy += holdMonsterValue;
+                if (input.isPressed && hasDrink && isSitting && currentDesk.CheckSpace())
+                {
+                    isDrinking = true;
+                    monsterScore += 100;
+                    StartCoroutine(Drinking());
+                }
+                else if (input.isPressed && isSitting && !hasDrink && isPressed || !currentDesk.CheckSpace())
+                {
+                    isPressed = false;
+                    isSitting = false;
+                    //TODO: stand up animation
+                }
+
+                else if (input.isPressed && !isSitting && closeToChair && !isPressed && currentDesk.CheckSpace())
+                {
+                    isPressed = true;
+                    isSitting = true;
+                    //TODO: sit down animation
+                }
             }
-            else
+            if (vendingMachine != null)
             {
-                Destroy(gameObject);
+                if (input.isPressed && closeToDispenser)
+                {
+                    StartCoroutine(DispenserRoutine()); // ------> Instatiate Monster in front of the machine after x seconds
+                }
             }
         }
-        else if(input.isPressed && isSitting && !hasDrink || !currentDesk.CheckSpace())
-        {
-            isSitting = false;
-            //TODO: stand up animation
-        }
+    }
 
-        if(input.isPressed && !isSitting && closeToChair && currentDesk.CheckSpace())
-        {            
-            isSitting = true;
-            //TODO: sit down animation
-        }
+    IEnumerator DispenserRoutine()
+    {
+        yield return new WaitForSeconds(2);
+        vendingMachine.Dispense(spawnPosition);
+    }
 
-        if(input.isPressed && closeToDispenser)
+    IEnumerator Drinking()
+    {
+        yield return new WaitForSeconds(2);
+        hasDrink = false;
+        isDrinking = false;
+        if (currentEnergy < maxEnergy)
         {
-            //TODO: VendingMachine.Dispense(); ------> Instatiate Monster in front of the machine after x seconds
+            currentEnergy += holdMonsterValue;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -95,18 +122,24 @@ public class PlayerLogic : MonoBehaviour
         if(collision.gameObject.tag == "Chair") 
         {
             closeToChair = true;
-            //TODO: currentDesk = collision.gameobject.GetComponent<Desk>();
-        }
-        else
-        {
-            closeToChair = false;
+            currentDesk = collision.gameObject.GetComponent<Desk>();
         }
 
-        if (collision.gameObject.tag == "Dispenser")
+        if (collision.gameObject.tag == "VendingMachine")
         {
             closeToDispenser = true;
+            vendingMachine = collision.gameObject.GetComponent<VendingMachine>();
         }
-        else
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Chair")
+        {
+            closeToChair = false;            
+        }
+
+        if (collision.gameObject.tag == "VendingMachine")
         {
             closeToDispenser = false;
         }
@@ -118,6 +151,13 @@ public class PlayerLogic : MonoBehaviour
         {
             hasDrink = true;
             Destroy(other.gameObject);
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "FOV" && !gotCaught && hasDrink && !isSitting || isDrinking)
+        {
+            gotCaught = true;
         }
     }
 }

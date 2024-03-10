@@ -41,11 +41,4 @@ public class Movement : MonoBehaviour
         }
         
     }
-    public void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "FOV")
-        {
-            //Debug.Log("OwO");
-        }
-    }
 }

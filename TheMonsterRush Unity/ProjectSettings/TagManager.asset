@@ -9,6 +9,9 @@ TagManager:
   - Wall
   - Desk
   - FOV
+  - VendingMachine
+  - Chair
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

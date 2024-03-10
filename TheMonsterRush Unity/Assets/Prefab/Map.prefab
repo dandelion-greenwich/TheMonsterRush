@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7747451629464233254}
   m_Layer: 8
   m_Name: Desk (5)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &801473746096648404
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +164,7 @@ GameObject:
   - component: {fileID: 1552861421944757566}
   m_Layer: 8
   m_Name: Desk (7)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,6 +294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &804276713861113115
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +445,7 @@ GameObject:
   - component: {fileID: 5377621749647181626}
   m_Layer: 8
   m_Name: Desk (9)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571,6 +575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &1112070059221189082
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +593,7 @@ GameObject:
   - component: {fileID: 8935063222248837602}
   m_Layer: 8
   m_Name: Desk (3)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -717,6 +723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &2372405297859103197
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +741,7 @@ GameObject:
   - component: {fileID: 193732170179831026}
   m_Layer: 8
   m_Name: Desk (2)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -863,6 +871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &2412099819467914633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1022,7 @@ GameObject:
   - component: {fileID: 8456229609940535516}
   m_Layer: 8
   m_Name: Desk (10)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,6 +1152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &3734413154928675866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1436,7 @@ GameObject:
   - component: {fileID: 7996958518884657994}
   m_Layer: 8
   m_Name: Desk (8)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1554,6 +1566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &4544236628969570681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1584,7 @@ GameObject:
   - component: {fileID: 6330776127303181206}
   m_Layer: 8
   m_Name: Desk
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1700,6 +1714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &5262988643452877775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,7 +1732,7 @@ GameObject:
   - component: {fileID: 5605916487550395797}
   m_Layer: 8
   m_Name: Desk (12)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1846,6 +1862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &5837983394178997647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1880,7 @@ GameObject:
   - component: {fileID: 8462121840768271225}
   m_Layer: 8
   m_Name: Desk (6)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1992,6 +2010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &6143938775127073668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,7 +2250,7 @@ GameObject:
   - component: {fileID: 3779657652069945464}
   m_Layer: 8
   m_Name: Desk (11)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2360,6 +2380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &8093671016571619245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,7 +2398,7 @@ GameObject:
   - component: {fileID: 2292155414130245067}
   m_Layer: 8
   m_Name: Desk (4)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2506,6 +2528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &8539598529020801522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,7 +2546,7 @@ GameObject:
   - component: {fileID: 344127083374752178}
   m_Layer: 8
   m_Name: Desk (13)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2652,6 +2676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &8784912715655783256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,7 +2694,7 @@ GameObject:
   - component: {fileID: 6374924405413075269}
   m_Layer: 8
   m_Name: Desk (1)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2798,6 +2824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
 --- !u!1 &9024454953745532519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,7 +2842,7 @@ GameObject:
   - component: {fileID: 9150815648897775326}
   m_Layer: 8
   m_Name: Desk (14)
-  m_TagString: Desk
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2944,3 +2972,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf1888a306c0fc4dae74f0847c8ade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAmount: 0
+  maxCanAmount: 10
