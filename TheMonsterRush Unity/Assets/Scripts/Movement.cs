@@ -16,6 +16,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] PlayerLogic player;
 
+    public AudioManager1 am;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,6 @@ public class Movement : MonoBehaviour
         if (!player.isSitting)
         {
             Vector2 xyInput = input.Get<Vector2>();
-            AudioSource.PlayClipAtPoint(stepSound, transform.position, 1f);
 
             movementVec = new Vector3(xyInput.x, 0, xyInput.y);
         }

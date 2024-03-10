@@ -4,15 +4,16 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private Canvas canvas;
+    public Canvas canvas;
     public GameObject MenuPage;
     public GameObject AudioSettingsPanel;
     public GameObject VideoSettingsPanel;
     public GameObject KeybindingsPanel;
-    //public GameObject GameOverPanel;
+    public GameObject GameOverPanel;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class MenuManager : MonoBehaviour
         VideoSettingsPanel.SetActive(false);
         AudioSettingsPanel.SetActive(false);
         KeybindingsPanel.SetActive(false);
-        //GameOverPanel.SetActive(false);
+        GameOverPanel.SetActive(false);
     }
 
     public void OnMainMenuPress()
@@ -39,7 +40,7 @@ public class MenuManager : MonoBehaviour
 
     public void OnStartGamePress()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Movement");
         Debug.Log("Do monster");
     }
 
@@ -47,6 +48,7 @@ public class MenuManager : MonoBehaviour
     {
         MenuPage.SetActive(false);
         VideoSettingsPanel.SetActive(true);
+        GameOverPanel.SetActive(false);
     }
 
     public void OnPauseMainMenu()

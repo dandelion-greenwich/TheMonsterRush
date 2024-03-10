@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1288,68 +1288,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &911005785
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 911005787}
-  - component: {fileID: 911005786}
-  m_Layer: 0
-  m_Name: PauseManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &911005786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911005785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c63f44e1a40cb1a4cad3a0b3056a396b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseButton:
-    m_Name: Pause Button
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: dfcd6228-9e31-4546-a26e-7d7a8e051d6d
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: f31e08d9-ea92-4d46-98e9-11f19ce05ca2
-      m_Path: <Keyboard>/escape
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Pause Button
-      m_Flags: 0
-    m_Flags: 0
-  canvas: {fileID: 2824750084587206866}
---- !u!4 &911005787
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911005785}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 292.68936, y: 254.51884, z: 2647.1365}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &926512215
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,6 +3063,7 @@ MonoBehaviour:
   AudioSettingsPanel: {fileID: 1456860576426915859}
   VideoSettingsPanel: {fileID: 7613367058647132021}
   KeybindingsPanel: {fileID: 7259990586801803442}
+  GameOverPanel: {fileID: 0}
 --- !u!222 &761810490388678878
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3427,6 +3366,67 @@ RectTransform:
   m_AnchoredPosition: {x: 250, y: -125.00004}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1060781356447026558
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 292.68936
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 254.51884
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2647.1365
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404976346449560921, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421350729777676646, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2824750084587206866}
+    - target: {fileID: 3470062242287576313, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
+      propertyPath: m_Name
+      value: PauseManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 267d30de1344ad44cbe19f5d7145a985, type: 3}
 --- !u!114 &1061033843127781766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12258,7 +12258,7 @@ SceneRoots:
   - {fileID: 1823195286}
   - {fileID: 265890749}
   - {fileID: 511953968}
-  - {fileID: 911005787}
+  - {fileID: 1060781356447026558}
   - {fileID: 9040188261735206853}
   - {fileID: 926512218}
   - {fileID: 1310452615}

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class AudioManager1 : MonoBehaviour
 {
-    public enum SoundFXCat { FootStep, Drinking, Dispenser, EndingNoMonster, AngryAh }
+    public enum SoundFXCat { FootStep, Drinking, Dispenser, EndingNoMonster, AngryAh, PressSpace }
     public GameObject audioObject;
     public AudioClip[] footSteps;
     public AudioClip[] drinking;
     public AudioClip[] dispenser;
     public AudioClip[] endingNoMonster;
     public AudioClip[] angryAh;
+    public AudioClip[] pressSpace;
 
 
     public void AudioTrigger(SoundFXCat AudioType, Vector3 audioPosition, float volume)
@@ -33,6 +34,9 @@ public class AudioManager1 : MonoBehaviour
                 break;
             case (SoundFXCat.AngryAh):
                 ca.myClip = angryAh[Random.Range(0, angryAh.Length)];
+                break;
+            case (SoundFXCat.PressSpace):
+                ca.myClip = pressSpace[Random.Range(0, pressSpace.Length)];
                 break;
         }
 

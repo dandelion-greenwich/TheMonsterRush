@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
         pauseButton.performed += _ => Pause();        
     }
 
-    private void Pause()
+    public void Pause()
     {
         paused = !paused;
         if (paused)

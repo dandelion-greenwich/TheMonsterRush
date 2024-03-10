@@ -14,6 +14,13 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField]Desk currentDesk, inputDesk;
     [SerializeField]VendingMachine vendingMachine;
     Vector3 spawnPosition;
+    public AudioManager1 am;
+    public Canvas canvas;
+    public GameObject MenuPage;
+    public GameObject AudioSettingsPanel;
+    public GameObject VideoSettingsPanel;
+    public GameObject KeybindingsPanel;
+    public GameObject GameOverPanel;
 
 
     // Start is called before the first frame update
@@ -69,9 +76,11 @@ public class PlayerLogic : MonoBehaviour
             {
                 if (input.isPressed && hasDrink && isSitting && currentDesk.CheckSpace())
                 {
+                    am.AudioTrigger(AudioManager1.SoundFXCat.Drinking, transform.position, 1f);
                     isDrinking = true;
                     hasDrink = false;
                     StartCoroutine(Drinking());
+                   // am.AudioTrigger(AudioManager1.SoundFXCat.EndingNoMonster, transform.position, 1f);
                 }
                 else if (input.isPressed && isSitting && !hasDrink && !isDrinking && isPressed || !currentDesk.CheckSpace())
                 {
@@ -82,6 +91,7 @@ public class PlayerLogic : MonoBehaviour
 
                 else if (input.isPressed && !isSitting && closeToChair && !isPressed && currentDesk.CheckSpace())
                 {
+                    am.AudioTrigger(AudioManager1.SoundFXCat.AngryAh, transform.position, 0.1f);
                     isPressed = true;
                     isSitting = true;
                     //TODO: sit down animation
@@ -91,6 +101,7 @@ public class PlayerLogic : MonoBehaviour
             {
                 if (input.isPressed && closeToDispenser)
                 {
+                    am.AudioTrigger(AudioManager1.SoundFXCat.Dispenser, transform.position, 1f);
                     StartCoroutine(DispenserRoutine()); // ------> Instatiate Monster in front of the machine after x seconds
                 }
             }
@@ -126,12 +137,12 @@ public class PlayerLogic : MonoBehaviour
             closeToChair = true;
             currentDesk = collision.gameObject.GetComponent<Desk>();
         }
-
+/*
         if (collision.gameObject.tag == "VendingMachine")
         {
             closeToDispenser = true;
             vendingMachine = collision.gameObject.GetComponent<VendingMachine>();
-        }
+        }*/
     }
 
     private void OnCollisionExit(Collision collision)
@@ -155,9 +166,34 @@ public class PlayerLogic : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.tag == "FOV" && !gotCaught && hasDrink && !isSitting || isDrinking)
+        if (other.gameObject.tag == "FOV"&& hasDrink && !isSitting || isDrinking)
         {
             gotCaught = true;
+            Time.timeScale = 0;
+            am.AudioTrigger(AudioManager1.SoundFXCat.EndingNoMonster, transform.position, 1f);
+            canvas.enabled = true;
+            MenuPage.SetActive(false);
+            VideoSettingsPanel.SetActive(false);
+            AudioSettingsPanel.SetActive(false);
+            KeybindingsPanel.SetActive(false);
+            GameOverPanel.SetActive(true);
+
+
+        }
+
+        if (other.gameObject.tag == "VendingMachine")
+        {
+            am.AudioTrigger(AudioManager1.SoundFXCat.PressSpace, transform.position, 1f);
+            closeToDispenser = true;
+            vendingMachine = other.gameObject.GetComponent<VendingMachine>();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "VendingMachine")
+        {
+            closeToDispenser = false;
+            vendingMachine = other.gameObject.GetComponent<VendingMachine>();
         }
     }
 }
