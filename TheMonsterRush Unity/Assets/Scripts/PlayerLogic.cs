@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -69,10 +70,10 @@ public class PlayerLogic : MonoBehaviour
                 if (input.isPressed && hasDrink && isSitting && currentDesk.CheckSpace())
                 {
                     isDrinking = true;
-                    monsterScore += 100;
+                    hasDrink = false;
                     StartCoroutine(Drinking());
                 }
-                else if (input.isPressed && isSitting && !hasDrink && isPressed || !currentDesk.CheckSpace())
+                else if (input.isPressed && isSitting && !hasDrink && !isDrinking && isPressed || !currentDesk.CheckSpace())
                 {
                     isPressed = false;
                     isSitting = false;
@@ -104,12 +105,13 @@ public class PlayerLogic : MonoBehaviour
 
     IEnumerator Drinking()
     {
-        yield return new WaitForSeconds(2);
-        hasDrink = false;
-        isDrinking = false;
+        yield return new WaitForSeconds(2);        
+        isDrinking = false;        
+        currentDesk.canAmount++;
         if (currentEnergy < maxEnergy)
         {
             currentEnergy += holdMonsterValue;
+            monsterScore += 100;
         }
         else
         {
@@ -152,9 +154,7 @@ public class PlayerLogic : MonoBehaviour
             hasDrink = true;
             Destroy(other.gameObject);
         }
-    }
-    private void OnTriggerStay(Collider other)
-    {
+
         if (other.gameObject.tag == "FOV" && !gotCaught && hasDrink && !isSitting || isDrinking)
         {
             gotCaught = true;

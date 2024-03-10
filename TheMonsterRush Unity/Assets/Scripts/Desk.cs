@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Desk : MonoBehaviour
 {
-    [SerializeField] int canAmount, maxCanAmount;
+    public int canAmount, maxCanAmount;
 
     public bool CheckSpace()
     {
