@@ -2822,7 +2822,7 @@ MonoBehaviour:
   AudioSettingsPanel: {fileID: 1456860576426915859}
   VideoSettingsPanel: {fileID: 7613367058647132021}
   KeybindingsPanel: {fileID: 7259990586801803442}
-  GameOverPanel: {fileID: 0}
+  GameOverPanel: {fileID: 466203746}
 --- !u!222 &761810490388678878
 CanvasRenderer:
   m_ObjectHideFlags: 0

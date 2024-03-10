@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
     public GameObject AudioSettingsPanel;
     public GameObject VideoSettingsPanel;
     public GameObject KeybindingsPanel;
-    public GameObject GameOverPanel;
+    //public GameObject GameOverPanel;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class MenuManager : MonoBehaviour
         VideoSettingsPanel.SetActive(false);
         AudioSettingsPanel.SetActive(false);
         KeybindingsPanel.SetActive(false);
-        GameOverPanel.SetActive(false);
+        //GameOverPanel.SetActive(false);
     }
 
     public void OnMainMenuPress()
